@@ -7,7 +7,7 @@
 ## 必要なもの
 
 - Docker(Compose v2)
-- Go 1.25 以上
+- Go 1.27(`.tool-versions` で固定。Dockerビルドは `golang:1.27.1`)
 - golangci-lint v2(`brew install golangci-lint`)
 
 k6はDockerイメージで動かすのでインストール不要。

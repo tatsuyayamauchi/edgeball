@@ -23,6 +23,7 @@ CDNの仕組みを自分で作って理解するための学習用リポジト�
 ## 開発ルール
 
 - Gitは main に直接コミットする。フェーズ完了時に `vN.0.0` タグを打つ(Phase 1 = `v1.0.0`)
+- Goは 1.27(`.tool-versions` で 1.27.1 に固定、Dockerビルドは `golang:1.27.1`)。Dockerイメージのタグは Docker Hub の最新安定版を固定で指定する(`latest` は使わない)
 - Goはルートの単一モジュール(`github.com/tatsuyayamauchi/edgeball`)。標準ライブラリを優先し、外部依存は `docs/architecture.md` に挙がっているもの(`prometheus/client_golang`、`x/sync` など)に留める
 - Luaは使わない
 - Goファイルの編集後は hook で `gofmt` が自動で走る。コミット前に `make lint test` を通す
