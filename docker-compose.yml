@@ -1,4 +1,16 @@
 services:
+  # --- オリジン ---
+  origin:
+    build:
+      context: .
+      dockerfile: origin/Dockerfile
+    environment:
+      MAX_AGE: "60"
+      MAX_ITEMS: "10000"
+      LATENCY: "50:20ms,90:50ms,95:100ms,99:1s"
+    ports:
+      - "8081:8080" # デバッグ用に直接叩けるようにする
+
   # --- 観測基盤 ---
   prometheus:
     image: prom/prometheus:v3.15.0

@@ -1,0 +1,6 @@
+.git
+.claude
+docs
+loadtest
+observability
+**/cache-data

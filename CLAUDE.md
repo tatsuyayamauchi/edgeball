@@ -37,6 +37,7 @@ make down      # 停止(ボリュームは残す)
 make clean     # 停止してボリュームも削除
 make ps        # コンテナ一覧
 make logs      # ログを追う(S=サービス名で絞り込み)
+make reload    # 設定ファイルを読み直す(S=サービス名、既定は prometheus)
 make test      # go test ./...
 make lint      # golangci-lint run
 make fmt       # gofmt

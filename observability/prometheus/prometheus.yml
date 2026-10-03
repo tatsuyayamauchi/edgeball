@@ -7,7 +7,6 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9090"]
 
-  # Phase 1 以降でコンテナを追加したらここに足す
-  # - job_name: origin
-  #   static_configs:
-  #     - targets: ["origin:8080"]
+  - job_name: origin
+    static_configs:
+      - targets: ["origin:8080"]
