@@ -1,0 +1,15 @@
+version: "2"
+
+linters:
+  default: standard
+  enable:
+    - bodyclose # http.Response.Body の閉じ忘れ(プロキシ実装で起きやすい)
+    - errorlint # errors.Is / errors.As を使っているか
+    - gocritic
+    - misspell
+    - unconvert
+
+formatters:
+  enable:
+    - gofmt
+    - goimports

@@ -31,3 +31,13 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# edgeball
+.DS_Store
+# k6の結果出力
+loadtest/results/
+# ローカルで動かしたときのnginxキャッシュ・データ
+**/cache-data/
+observability/data/
+# Claude Codeの個人設定
+.claude/settings.local.json
